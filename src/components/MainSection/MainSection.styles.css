@@ -1,0 +1,10 @@
+.main-section-container {
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 80vw;
+}
+
+.section-links  {
+    float: right;
+}

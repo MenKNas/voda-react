@@ -1,0 +1,18 @@
+.tiles-container {
+    display:grid;
+    padding: 4rem;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 2%;
+    width: 60%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.page-2-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.page-2-container h2{
+    margin-top: 5rem;
+}

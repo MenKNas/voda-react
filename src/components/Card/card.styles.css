@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    font-size: 0.85rem;
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.card-body {
+    width: 70%;
+    line-height: 1.25rem;
+}
+
+.card-btn {
+    all:unset;
+    color: #0077cc;
+    font-weight: 600;
+}
+
+.card-btn:hover {
+    cursor: pointer;
+}
+
+.card:last-child, .card:last-child .card-btn {
+    background-color: #1d2b37;
+    color: white;
+}

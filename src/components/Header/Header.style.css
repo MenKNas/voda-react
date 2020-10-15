@@ -1,0 +1,50 @@
+.header-container {
+    height: 400px;
+    background-color: #404859;
+}
+
+/* .carousel-container {
+    background-color: #404859;
+} */
+
+/* override carousel styles */
+
+/* .carousel-container {
+    
+} */
+
+
+.carousel .slide {
+    padding-top: 2rem !important;
+    background-color: #404859 !important;
+}
+
+
+.carousel .slide img {
+    width: 25% !important;
+    vertical-align: top !important;
+    margin-bottom: 1rem !important;
+}
+
+.carousel .slide .legend, .carousel .slide.selected .legend {
+    background-color: #404859 !important;
+    margin-top: 2rem !important ;
+    margin-bottom: 2rem !important;
+    font-size: 20px !important;
+    opacity: 1 !important;
+}
+
+.subtitle {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+    color: white !important;
+}
+
+.carousel .control-dots {
+    margin-top: 4rem !important;
+    padding-top: 2rem !important;
+}
+
+.carousel .thumbs-wrapper {
+    display: none !important;
+}
