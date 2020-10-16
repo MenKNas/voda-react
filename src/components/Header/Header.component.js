@@ -28,9 +28,9 @@ class Header extends React.Component {
       return (
             <div className="header-container">
                 <div> 
-                    <Link to="/home"> Home </Link>
-                    <Link to="/page2"> Page 2 </Link>
-                    <input placeholder="search your text here"/>
+                    <Link to="/home" className="nav-link"> Home </Link>
+                    <Link to="/page2" className="nav-link"> Page 2 </Link>
+                    <Link to="/search" className="nav-link"> <i className="fa fa-search"></i> </Link>
                     <div className="carousel-container">
                         <Carousel >
                             {this.state.slides.map((slide,index) => (

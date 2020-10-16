@@ -1,6 +1,6 @@
 import React from 'react';
 import './homepage.styles.css';
-import MainSection from '../../components/MainSection/MainSection.component.js'
+import queryString from 'query-string';
 import {
     BrowserRouter as Router,
     Switch,
@@ -16,7 +16,9 @@ class Home extends React.Component {
     id: null,
     description: null,
     name: null,
-    sections: []
+    sections: [],
+    params: {},
+    selectedTab: null
   }
 
   componentDidMount() {
@@ -32,13 +34,33 @@ class Home extends React.Component {
         })
     })
     .catch(console.log)
+
+      let params = queryString.parse(this.props.location.search)
+      if (params.section1) {
+        this.setState({
+          selectedTab: 0
+        })
+      } else if (params.section2) {
+        this.setState({
+          selectedTab: 1
+        })
+      } else {
+        this.setState({
+          selectedTab: null
+        })
+      }
     }
+
+    handleTabs(e){
+      this.inputElement2.click()
+    }
+
   render(){
     return (
       <div className="homepage"> 
       <h1> {this.state.description} </h1>
       <Tabs>
-      <TabList className="tab-list">
+      <TabList className="tab-list" onClick={this.handleTabs}>
         <Tab className="main-tab">Section 1</Tab>
         <Tab className="main-tab">Section 2</Tab>
       </TabList>

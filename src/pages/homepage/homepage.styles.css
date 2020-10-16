@@ -4,6 +4,10 @@
     align-items: center;
     padding: 20px 80px;
   }
+
+  .homepage h1 {
+    margin-top: 4rem;
+  }
   
   .main-tab {
     list-style: none;

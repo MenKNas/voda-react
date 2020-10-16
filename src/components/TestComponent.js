@@ -5,10 +5,29 @@ import 'rc-slider/assets/index.css';
 
 class TestComponent extends React.Component {
 
+    state = {
+        phoneValid: null,
+        emailValid: null,
+        passwordValid: null
+    }
+
     giveClass(index) {
         return "img-" +index
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+    }
+
+    handleInput(e){
+        if(e.target.placeholder==='Your phone') {
+            if (e.target.value.length < 10) {
+                this.setState(({
+                    phoneValid: false
+                }))
+            }
+        }
+    }
 
     render() {
         if (this.props.id === "01") {
@@ -48,12 +67,15 @@ class TestComponent extends React.Component {
                         <div className="contact-form">
                             <h3> {this.props.formText} </h3>
                             <p> We work with ecosystem leaders, corporations and startups worldwide. How can we help you ?</p>
+                            <form onSubmit={this.handleSubmit}>
                             {this.props.formLabels.map((label,index)=>(
                                 <div key={index} className="form-group">
-                                    <input placeholder={label} className="contact-field"/>
+                                    <input placeholder={label} className="contact-field" onChange={this.handleInput}/>
+                                    <p></p>
                                 </div>
                             ))}
                             <button type="submit"> {this.props.buttonText} </button>
+                            </form>
                         </div>
                     </div>
             )

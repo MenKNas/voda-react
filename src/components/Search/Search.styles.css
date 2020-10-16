@@ -1,0 +1,83 @@
+.fullpage-search {
+    background-color: #212424;
+    height: 103vh;
+    margin-top: -1.35rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.search-container {
+    margin-top: 10rem;
+}
+
+.exit-btn {
+    all: unset;
+    background-color: #212424;
+    color: white;
+    border-radius: 50%;
+    border:1px solid white;
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    float: right;
+    font-size: 1.25rem;
+}
+
+.exit-btn:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.search-field {
+    all: unset;
+    border-bottom:1px solid rgb(156, 156, 156);
+    width: 40%;
+    padding-bottom: 0.5rem;
+    color: white;
+}
+
+.routes-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    margin:2rem auto;
+    margin-top: 1rem;
+    padding-left: 0;
+    color: white;
+    border:1px solid rgb(156, 156, 156);
+    width: 40%;
+    padding: 1.5rem;
+}
+
+.routes-list ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    margin-left: 2.5rem;
+}
+
+.routes-list li {
+    margin-top: 1rem;
+}
+
+.search-link {
+    list-style: none;
+    color: white;
+    margin-top: 2rem;
+}
+
+.search-link-nested {
+    color: white;
+    padding-top: 1rem;
+}
+
+.search-link:first-child {
+    margin-top: 0rem;
+} 
+
+.fa-search {
+    color:white;
+    margin-right: -1rem;
+}
