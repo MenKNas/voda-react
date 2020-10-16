@@ -5,4 +5,26 @@
     padding: 20px 80px;
   }
   
-  
+  .main-tab {
+    list-style: none;
+  }
+
+  .main-tab:hover {
+    cursor: pointer;
+  }
+
+  .react-tabs__tab--selected{
+    color: #2498eb;;
+  }
+
+  .tab-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .tab-list .main-tab:last-child {
+    margin-left: 2rem;
+  }
