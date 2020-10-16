@@ -1,5 +1,5 @@
 .header-container {
-    height: 400px;
+    height: 350px;
     background-color: #404859;
     display: flex;
     flex-direction: row;
@@ -20,20 +20,20 @@
 
 
 .carousel .slide {
-    padding-top: 2rem !important;
+    padding-top: 1rem !important;
     background-color: #404859 !important;
 }
 
 
 .carousel .slide img {
-    width: 25% !important;
+    width: 18% !important;
     vertical-align: top !important;
     margin-bottom: 1rem !important;
 }
 
 .carousel .slide .legend, .carousel .slide.selected .legend {
     background-color: #404859 !important;
-    margin-top: 2rem !important ;
+    margin-top: 1rem !important ;
     margin-bottom: 2rem !important;
     font-size: 20px !important;
     opacity: 1 !important;
@@ -57,4 +57,8 @@
 .nav-link {
     color: white;
     margin-left: 1rem;
+}
+
+.active-link {
+    color:#2498eb;
 }

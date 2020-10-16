@@ -4,9 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
+    NavLink
   } from "react-router-dom";
 
 class Header extends React.Component {
@@ -28,9 +26,9 @@ class Header extends React.Component {
       return (
             <div className="header-container">
                 <div> 
-                    <Link to="/home" className="nav-link"> Home </Link>
-                    <Link to="/page2" className="nav-link"> Page 2 </Link>
-                    <Link to="/search" className="nav-link"> <i className="fa fa-search"></i> </Link>
+                    <NavLink to="/home" className="nav-link" activeClassName="active-link"> Home </NavLink>
+                    <NavLink to="/page2" className="nav-link" activeClassName="active-link"> Page 2 </NavLink>
+                    <NavLink to="/search" className="nav-link"> <i className="fa fa-search"></i> </NavLink>
                     <div className="carousel-container">
                         <Carousel >
                             {this.state.slides.map((slide,index) => (

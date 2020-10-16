@@ -8,7 +8,7 @@ import {
     Link
   } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import TestComponent from '../../components/TestComponent';
+import SectionTwo from '../../components/SectionTwo';
 
 class Home extends React.Component {
  
@@ -51,22 +51,18 @@ class Home extends React.Component {
       }
     }
 
-    handleTabs(e){
-      this.inputElement2.click()
-    }
-
   render(){
     return (
       <div className="homepage"> 
       <h1> {this.state.description} </h1>
       <Tabs>
-      <TabList className="tab-list" onClick={this.handleTabs}>
+      <TabList className="tab-list">
         <Tab className="main-tab">Section 1</Tab>
         <Tab className="main-tab">Section 2</Tab>
       </TabList>
       { this.state.sections.map((section, index)=>(
         <TabPanel key={index}>
-          <TestComponent 
+          <SectionTwo 
             id={section.id} 
             title={section.title}
             images={section.images}

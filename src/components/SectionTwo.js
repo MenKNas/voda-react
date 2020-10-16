@@ -1,32 +1,75 @@
 import React from 'react'
-import './test-component.styles.css'
+import './section-two.styles.css'
 import Slider, { Range } from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-class TestComponent extends React.Component {
+class SectionTwo extends React.Component {
 
     state = {
         phoneValid: null,
         emailValid: null,
-        passwordValid: null
+        passwordValid: null,
+        phoneMessage: '',
+        emailMessage: '',
+        passwordMessage: '',
+        genericMessage: '',
+        disabledBtn: true
     }
 
     giveClass(index) {
         return "img-" +index
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
+    handleSubmit = (e) => {
+        e.preventDefault()
     }
 
-    handleInput(e){
+    handleInput = (e) => {
+        this.setState({
+            disabledBtn: false
+        })
         if(e.target.placeholder==='Your phone') {
-            if (e.target.value.length < 10) {
+            const re = /^((2)|(6))[0-9]{9}$/;
+            if (e.target.value.length < 9 || !(re.test(e.target.value))) {
                 this.setState(({
-                    phoneValid: false
+                    phoneMessage: 'Invalid Phone Number'
                 }))
+            } else {
+                this.setState({
+                    phoneMessage: ''
+                })
+            }
+        } else if(e.target.placeholder==='Your Email') {
+            const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+            if (!(re.test(e.target.value))) {
+                this.setState(({
+                    emailMessage: 'Invalid Email'
+                }))
+            } else {
+                this.setState({
+                    emailMessage: ''
+                })
+            }
+        } else if(e.target.placeholder==='Your password') {
+            const re = /(?=^.{8,}$)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).*/
+            if (!(re.test(e.target.value))) {
+                this.setState(({
+                    passwordMessage: 'Password is not strong enough'
+                }))
+            } else {
+                this.setState({
+                    passwordMessage: ''
+                })
             }
         }
+    }
+
+    printErrorMessages(){
+        if (!this.state.phoneValid) {
+            this.setState({
+                errorMessage: 'invalid phone'
+            })
+        } 
     }
 
     render() {
@@ -69,12 +112,21 @@ class TestComponent extends React.Component {
                             <p> We work with ecosystem leaders, corporations and startups worldwide. How can we help you ?</p>
                             <form onSubmit={this.handleSubmit}>
                             {this.props.formLabels.map((label,index)=>(
+                                label==='Your password' ? 
                                 <div key={index} className="form-group">
-                                    <input placeholder={label} className="contact-field" onChange={this.handleInput}/>
-                                    <p></p>
+                                    <input type="password" placeholder={label} className="contact-field" onChange={this.handleInput}/>
+                                </div>
+                                :                               
+                                <div key={index} className="form-group">
+                                    <input type="text" placeholder={label} className="contact-field" onChange={this.handleInput}/>
                                 </div>
                             ))}
-                            <button type="submit"> {this.props.buttonText} </button>
+                            <div className="error-messages">
+                                <p> {this.state.phoneMessage} </p>
+                                <p> {this.state.emailMessage} </p>
+                                <p> {this.state.passwordMessage} </p>
+                            </div>
+                            <button type="submit" disabled={this.state.disabledBtn}> {this.props.buttonText} </button>
                             </form>
                         </div>
                     </div>
@@ -83,4 +135,4 @@ class TestComponent extends React.Component {
     }
 }
 
-export default TestComponent
+export default SectionTwo
