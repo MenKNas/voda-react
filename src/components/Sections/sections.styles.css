@@ -2,9 +2,11 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 1%;
-    width: 100%;
+    grid-gap: 3%;
+    width: 60%;
+    margin:0 auto;
     text-align: center;
+    padding: 1rem;
 }
 
 .single-image-box {

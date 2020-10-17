@@ -1,9 +1,9 @@
 import React from 'react'
-import './section-two.styles.css'
+import './sections.styles.css'
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-class SectionTwo extends React.Component {
+class Sections extends React.Component {
 
     state = {
         phoneValid: null,
@@ -135,4 +135,4 @@ class SectionTwo extends React.Component {
     }
 }
 
-export default SectionTwo
+export default Sections;

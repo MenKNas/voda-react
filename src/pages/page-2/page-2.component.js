@@ -27,7 +27,7 @@ class Page2 extends React.Component {
     render() {
       return (
         <div className="page-2-container">
-            <h2> {this.state.description }</h2>
+            <h1> {this.state.description }</h1>
             <div className="tiles-container">
                 {this.state.tiles.map((tile, index)=>(
                     <Card 

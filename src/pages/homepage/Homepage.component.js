@@ -2,7 +2,7 @@ import React from 'react';
 import './homepage.styles.css';
 import queryString from 'query-string';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import SectionTwo from '../../components/SectionTwo';
+import Sections from '../../components/Sections/Sections.component';
 
 class Home extends React.Component {
  
@@ -55,7 +55,7 @@ class Home extends React.Component {
       </TabList>
       { this.state.sections.map((section, index)=>(
         <TabPanel key={index}>
-          <SectionTwo 
+          <Sections
             id={section.id} 
             selectedTab={this.state.selectedTab}
             title={section.title}
