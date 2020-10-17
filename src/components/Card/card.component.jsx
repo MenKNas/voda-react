@@ -11,7 +11,7 @@ const Card = ({title, icon, description, link}) => {
             <div className="card-body">
                 <p> {description} </p>
                 <button className="card-btn"> 
-                {link} >
+                {link + " >"} 
                 </button>
             </div>
         </div> 

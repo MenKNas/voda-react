@@ -1,6 +1,6 @@
 import React from 'react'
 import './section-two.styles.css'
-import Slider, { Range } from 'rc-slider';
+import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 class SectionTwo extends React.Component {
@@ -73,14 +73,14 @@ class SectionTwo extends React.Component {
     }
 
     render() {
-        if (this.props.id === "01") {
+        if (this.props.id === "01" || (this.props.selectedTab && this.props.selectedTab=== "01")) {
             return(
                 <div>
                     <p> {this.props.title}</p>
                     <div className="images-grid">
                     {this.props.images.map((image,index)=>(
                             <div className="single-image-box" key={index}>
-                                <img src={image.img} className={this.giveClass(index)}/>
+                                <img src={image.img} className={this.giveClass(index)} alt={image.title}/>
                                 <div className="overlay">
                                     <div className="text">
                                      <p> &#128065; </p>

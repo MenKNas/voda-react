@@ -9,7 +9,7 @@ export default class Search extends Component {
             routes: [
                 {
                     name: 'Homepage', 
-                    url:'/home', 
+                    url:'/', 
                     nested:[
                         {name:'All', 'url': '/home'},
                         {name: 'Section1', url: '/home?section1=true'},
@@ -41,7 +41,7 @@ export default class Search extends Component {
 
         return (
             <div className="fullpage-search">
-                <Link className="exit-btn" to="/home"><i className="fa fa-times" aria-hidden="true"></i></Link>
+                <Link className="exit-btn" to="/"><i className="fa fa-times" aria-hidden="true"></i></Link>
                 <div className="search-container">
                     <input className="search-field" type="text" placeholder="Search here" onChange={this.handleSearch} value={this.state.searchTerm} ref="search"/> <i className="fa fa-search"></i>
                     <ul className="routes-list"> 

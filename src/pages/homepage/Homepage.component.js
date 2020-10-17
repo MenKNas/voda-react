@@ -1,12 +1,6 @@
 import React from 'react';
 import './homepage.styles.css';
 import queryString from 'query-string';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import SectionTwo from '../../components/SectionTwo';
 
@@ -25,7 +19,6 @@ class Home extends React.Component {
     fetch('https://voda-react-assessment.herokuapp.com/home')
     .then(res => res.json())
     .then((data) => {
-        console.log(data)
         this.setState({ 
             id: data[0].id,
             description: data[0].description,
@@ -33,7 +26,7 @@ class Home extends React.Component {
             sections: data[0].sections
         })
     })
-    .catch(console.log)
+    // .catch(console.log)
 
       let params = queryString.parse(this.props.location.search)
       if (params.section1) {

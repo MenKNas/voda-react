@@ -4,6 +4,7 @@
     grid-template-rows: 1fr 1fr;
     grid-gap: 1%;
     width: 100%;
+    text-align: center;
 }
 
 .single-image-box {
@@ -78,6 +79,7 @@
       grid-template-columns: 50% 50%;
       grid-gap: 10%;
       margin:0 auto;
+      font-size: 1rem;
   }
 
   .our-services h4 {
@@ -123,6 +125,17 @@ and (min-device-width: 320px)
 and (max-device-width: 740px)
 and (-webkit-min-device-pixel-ratio: 2) {
 
+  .images-grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1%;
+    width: 100%;
+    text-align: center;
+
+  }
+
   .section-2-main-area {
     display:flex;
     flex-direction: column;
@@ -141,5 +154,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
     margin-top: 0rem;
     width: 90%
   }
+
 
 }

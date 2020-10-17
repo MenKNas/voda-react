@@ -2,10 +2,7 @@ import React from 'react'
 import './Header.style.css';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import {
-    BrowserRouter as Router,
-    NavLink
-  } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Header extends React.Component {
 
@@ -19,7 +16,7 @@ class Header extends React.Component {
         .then((data) => {
           this.setState({ slides: data })
         })
-        .catch(console.log)
+        // .catch(console.log)
       }
     
     render() {

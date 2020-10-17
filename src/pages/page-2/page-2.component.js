@@ -14,8 +14,6 @@ class Page2 extends React.Component {
         fetch('https://voda-react-assessment.herokuapp.com/page')
         .then(res => res.json())
         .then((data) => {
-            console.log('pageeee 2')
-            console.log(data)
             this.setState({ 
                 id: data[0].id,
                 description: data[0].description,
@@ -23,7 +21,7 @@ class Page2 extends React.Component {
                 tiles: data[0].tiles
             })
         })
-        .catch(console.log)
+        // .catch(console.log)
     }
 
     render() {
