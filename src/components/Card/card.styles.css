@@ -30,3 +30,29 @@
     background-color: #1d2b37;
     color: white;
 }
+
+
+/*media queries for responsive styling */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 740px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    .tiles-container .card {
+        margin-top: 1.25rem;
+        font-size: 1.25rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        width: 90%;
+        line-height: 1.5rem;
+        margin-top: -0.5rem;
+        font-size: 1rem;
+    }
+    
+}

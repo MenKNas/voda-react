@@ -18,7 +18,7 @@ class Home extends React.Component {
     name: null,
     sections: [],
     params: {},
-    selectedTab: null
+    selectedTab: '01'
   }
 
   componentDidMount() {
@@ -38,11 +38,11 @@ class Home extends React.Component {
       let params = queryString.parse(this.props.location.search)
       if (params.section1) {
         this.setState({
-          selectedTab: 0
+          selectedTab: '01'
         })
       } else if (params.section2) {
         this.setState({
-          selectedTab: 1
+          selectedTab: '02'
         })
       } else {
         this.setState({
@@ -64,6 +64,7 @@ class Home extends React.Component {
         <TabPanel key={index}>
           <SectionTwo 
             id={section.id} 
+            selectedTab={this.state.selectedTab}
             title={section.title}
             images={section.images}
             graphText={section.graphText}

@@ -62,3 +62,40 @@
 .active-link {
     color:#2498eb;
 }
+
+/*media queries for responsive styling */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 740px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .header-container {
+        height: 15rem;
+        margin-bottom: 3rem;
+        background-color: #404859;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        padding-top: 0.5rem;
+        font-size: 1.25rem;
+    }
+
+    .carousel .slide {
+        padding-top: 2rem !important;
+        background-color: #404859 !important;
+    }
+    
+    .carousel .slide img {
+        width: 50% !important;
+        vertical-align: top !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .carousel .control-dots {
+        margin-top: 5rem !important;
+        padding-top: 3rem !important;
+    }
+
+}

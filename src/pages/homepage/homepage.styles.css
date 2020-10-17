@@ -32,3 +32,32 @@
   .tab-list .main-tab:last-child {
     margin-left: 2rem;
   }
+
+/*media queries for responsive styling */
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 740px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .homepage h1 {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+  }
+
+  .tab-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+    margin:0 auto;
+  }
+
+  .tab-list .main-tab:last-child {
+    margin-left: 0rem;
+  }
+
+}

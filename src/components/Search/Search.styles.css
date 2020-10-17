@@ -49,6 +49,7 @@
     border:1px solid rgb(156, 156, 156);
     width: 40%;
     padding: 1.5rem;
+    border-radius: 2px;
 }
 
 .routes-list ul {
@@ -80,4 +81,47 @@
 .fa-search {
     color:white;
     margin-right: -1rem;
+}
+
+/*media queries for responsive styling */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 740px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .fullpage-search {
+        background-color: #212424;
+        height: 100vh;
+        margin-top: 0rem;
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.15rem;
+    }
+
+    .search-container {
+        margin-top: 8rem;
+    }
+    
+    .search-field {
+        width: 80%;
+        padding-bottom: 0.5rem;
+    }
+    
+    .routes-list {
+        width: 80%;
+    }
+    
+    .exit-btn {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        float: right;
+        font-size: 0.85rem;
+    }
+
+    .fa-search {
+        margin-right: -1.25rem;
+    }
 }
