@@ -6,13 +6,17 @@ For styling plain CSS3 was used (no libraries/frameworks).
 # Third-party libraries used in the project:
   
   query-string for url params parsing
+  
   react-responsive-carousel for the header carousel
+  
   rc-slider for the sliders on section 2
+  
   react-tabs for the section tabs on homepage
   
  # How to run the project
  
  npm install 
+ 
  npm start
  
  # Some notes on the project
